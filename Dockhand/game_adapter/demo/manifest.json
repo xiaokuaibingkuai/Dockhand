@@ -1,0 +1,12 @@
+{
+  "pack_id": "demo",
+  "name": "示例包（只读，不可运行）",
+  "version": "1.0.0",
+  "author": "shipctl",
+  "demo": true,
+  "entry_states": ["main_map"],
+  "protocol_min": 2,
+  "license": "MIT",
+  "summary": "用于验证'截图 → 识别 → 状态'这条链路的示例包。只包含状态定义和只读断言技能，不含任何点击动作，因此无法用于实际操作。模板图是重新绘制的黑白线框示意图，不是任何游戏的截图。",
+  "format_version": 1
+}

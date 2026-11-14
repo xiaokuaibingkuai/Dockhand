@@ -1,0 +1,34 @@
+{
+  "manifest_version": 2,
+  "id": "com.marvis.shipctl",
+  "version": "0.2.0",
+  "name": "shipctl 手游控制台",
+  "description": "把手机/模拟器上的策略手游交给 agent 本地识别与操作：插件只下发目标级指令，识别与点击全部在电脑侧完成。默认演练模式，只观察不点击。",
+  "author": {
+    "name": "marvis",
+    "url": "https://github.com/xiaokuaibingkuai/Dockhand"
+  },
+  "license": "MIT",
+  "urls": {
+    "repository": "https://github.com/xiaokuaibingkuai/Dockhand",
+    "homepage": "https://github.com/xiaokuaibingkuai/Dockhand",
+    "issues": "https://github.com/xiaokuaibingkuai/Dockhand/issues"
+  },
+  "plugin_type": "automation",
+  "host_application": {
+    "min_version": "1.4.0",
+    "max_version": "1.4.99"
+  },
+  "sdk": {
+    "min_version": "2.22.0",
+    "max_version": "2.22.99"
+  },
+  "capabilities": [
+    "send.text",
+    "config.get"
+  ],
+  "i18n": {
+    "default_locale": "zh-CN",
+    "supported_locales": ["zh-CN"]
+  }
+}

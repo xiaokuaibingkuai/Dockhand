@@ -1,0 +1,36 @@
+{
+  "_comment": "技能定义。注意 demo 包里所有技能都只有 assert / wait_for，没有任何 tap / swipe / key —— 这是故意的：demo 包只能用来验证识别链路，不提供可执行动作。",
+
+  "assert_main": {
+    "description": "确认当前处于主界面（只读断言）",
+    "pre_states": ["any"],
+    "steps": [
+      {"op": "assert", "state": "main_map"}
+    ],
+    "expect_state": "main_map",
+    "timeout_ms": 8000,
+    "retryable": true
+  },
+
+  "assert_fleet": {
+    "description": "确认当前处于舰队面板（只读断言）",
+    "pre_states": ["any"],
+    "steps": [
+      {"op": "assert", "state": "fleet_panel"}
+    ],
+    "expect_state": "fleet_panel",
+    "timeout_ms": 8000,
+    "retryable": true
+  },
+
+  "wait_loading": {
+    "description": "等待加载结束并回到主界面（只读等待）",
+    "pre_states": ["loading", "any"],
+    "steps": [
+      {"op": "wait_for", "state": "main_map", "timeout_ms": 20000}
+    ],
+    "expect_state": "main_map",
+    "timeout_ms": 25000,
+    "retryable": true
+  }
+}

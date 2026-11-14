@@ -1,0 +1,27 @@
+{
+  "_comment": "状态定义。每个状态 = 一个可以稳定识别的界面特征。templates 里是相对本包目录的图片路径。",
+  "unknown": {
+    "description": "无法识别的界面。引擎的终止条件：处于此状态时不允许执行任何操作。",
+    "templates": []
+  },
+  "main_map": {
+    "description": "主界面（星图 / 大厅）。特征：底部功能栏 + 中央星域。",
+    "templates": ["templates/main_map.png"],
+    "min_confidence": 0.78
+  },
+  "fleet_panel": {
+    "description": "舰队面板。特征：左侧舰队列表 + 右侧舰船缩略。",
+    "templates": ["templates/fleet_panel.png"],
+    "min_confidence": 0.78
+  },
+  "battle_result": {
+    "description": "战斗结算弹窗。特征：中央结果标题 + 底部确认按钮。",
+    "templates": ["templates/battle_result.png"],
+    "min_confidence": 0.75
+  },
+  "loading": {
+    "description": "加载中（转圈动画）。置信度阈值低，因为动画帧之间差异大。",
+    "templates": ["templates/loading.png"],
+    "min_confidence": 0.62
+  }
+}

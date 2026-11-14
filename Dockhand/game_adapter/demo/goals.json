@@ -1,0 +1,33 @@
+{
+  "_comment": "目标定义。目标 = 用户/模型能说出口的事，例如'看看我在哪''等它加载完'。目标是技能的排列组合，不含任何坐标或识别细节。",
+
+  "look_main": {
+    "description": "确认当前是否在主界面。只读，不操作。",
+    "requires_state": "any",
+    "steps": [
+      {"skill": "assert_main"}
+    ],
+    "on_fail": "abort",
+    "max_attempts": 1
+  },
+
+  "look_fleet": {
+    "description": "确认当前是否在舰队面板。只读，不操作。",
+    "requires_state": "any",
+    "steps": [
+      {"skill": "assert_fleet"}
+    ],
+    "on_fail": "abort",
+    "max_attempts": 1
+  },
+
+  "wait_ready": {
+    "description": "如果在加载中，等它回到主界面。只读，不操作。",
+    "requires_state": "any",
+    "steps": [
+      {"skill": "wait_loading"}
+    ],
+    "on_fail": "abort",
+    "max_attempts": 1
+  }
+}
